@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    password: shivam
+    url: jdbc:mysql://localhost:3306/login?useSSL=false
+    username: root
+  mail:
+    host: smtp.mailtrap.io
+    username: a4fb9e3608c768
+    password: 22c4ff410c7dd3
+    port: 2525
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+jwt:
+  secret: secretkey123jjhlafjieajifjoisjdgijeaoijgisjdoigjoeaogjsdogpoesjjjeoijglkfsjlkgjsdlkjgksdjgklsjlkdjfgsajlkjglkjsdkjglkdsjlkgjdslkjglksjfkgsjdkljglksdjglkewioutpieuwpiwueiselkjgfnksjlhlvjhjshvivsjhlgjvhsjrhvljhjdshzkj

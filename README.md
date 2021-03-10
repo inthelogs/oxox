@@ -1,2 +1,0 @@
-# oxox
-Tic Tac Toe
