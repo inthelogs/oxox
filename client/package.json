@@ -4,17 +4,19 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "concurrently \"npm run dev\" \"npm run lint\"",
+		"start": "concurrently \"npm run dev\" \"npm run lint:watch\"",
 		"dev": "parcel src/index.html -p 3000",
+		"build": "parcel build src/index.html",
 		"format": "prettier \"src/**/*.{js,html}\" --write",
-		"lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
+		"lint": "esw \"src/**/*.{js, jsx}\"",
+		"lint:watch": "npm run lint -- --watch",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/inthelogs/oxox.git"
 	},
-	"author": "",
+	"author": "Pankaj Boruah",
 	"license": "ISC",
 	"bugs": {
 		"url": "https://github.com/inthelogs/oxox/issues"
@@ -29,6 +31,7 @@
 		"@babel/cli": "^7.14.3",
 		"@babel/core": "^7.14.3",
 		"@babel/eslint-parser": "^7.14.4",
+		"@babel/eslint-plugin": "^7.13.16",
 		"@babel/preset-env": "^7.14.4",
 		"@babel/preset-react": "^7.13.13",
 		"concurrently": "^6.2.0",
@@ -39,6 +42,7 @@
 		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-react": "^7.23.2",
 		"eslint-plugin-react-hooks": "^4.2.0",
+		"eslint-watch": "^7.0.0",
 		"parcel-bundler": "^1.12.5",
 		"prettier": "^2.3.0",
 		"prop-types": "^15.7.2"
