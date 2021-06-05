@@ -10,7 +10,9 @@
 		"format": "prettier \"src/**/*.{js,html}\" --write",
 		"lint": "esw \"src/**/*.{js, jsx}\"",
 		"lint:watch": "npm run lint -- --watch",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"prettify": "prettier . -c --config .prettierrc --write",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"prepare": "cd .. && husky install client/.husky"
 	},
 	"repository": {
 		"type": "git",
@@ -45,6 +47,7 @@
 		"eslint-watch": "^7.0.0",
 		"parcel-bundler": "^1.12.5",
 		"prettier": "^2.3.0",
-		"prop-types": "^15.7.2"
+		"prop-types": "^15.7.2",
+		"husky": "^6.0.0"
 	}
 }
